@@ -2,12 +2,8 @@
 name = "flaskproject1"
 version = "0.1.0"
 description = "A sample project using Poetry and pyproject.toml"
-authors = ["Vadym Sydorenko <vadym@example.com>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/your-repo"
-repository = "https://github.com/your-repo"
-keywords = ["example", "poetry", "pyproject.toml"]
 packages = [{ include = "app" }]
 
 [tool.poetry.dependencies]
