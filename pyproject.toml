@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "flaskproject1"
+version = "0.1.0"
+description = "A sample project using Poetry and pyproject.toml"
+authors = ["Vadym Sydorenko <vadym@example.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/your-repo"
+repository = "https://github.com/your-repo"
+keywords = ["example", "poetry", "pyproject.toml"]
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.26"
+sqlalchemy = "^2.0.35"
+flask = ">=3.1.0,<4.0.0"
+flask-sqlalchemy = ">=3.1.1,<4.0.0"
+flask-migrate = "^4.1.0"
+flask-wtf = "^1.2.2"
+wtforms = "^3.2.1"
+python-dateutil = "^2.9.0.post0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pre-commit = "^4.1.0"
+
+[tool.poetry.group.lint.dependencies]
+ruff = "^0.9.6"
+tryceratops = "^2.4.1"
+
+[tool.ruff]
+lint.select = ["E", "F", "W", "C90", "D", "I"]
+lint.ignore = ["D100", "D103", "D104"]
+exclude = ["migrations"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
